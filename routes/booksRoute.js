@@ -7,18 +7,25 @@ const router = express.Router()
 router.post('/', async (req, res) => {
     try {
         if (
-        !req.body.title ||
-        !req.body.author ||
-        !req.body.publishYear
+        !req.body.nome
         ) {
             return res.status(400).send({
-                message: 'Send all requred fields: title, author, publishYear',
+                message: 'Digite o nome',
             })
         }
         const newBook = {
-            title: req.body.title,
-            author: req.body.author,
-            publishYear: req.body.publishYear,
+            nome: req.body.nome,
+            por1: req.body.por1,
+            por2: req.body.por2,
+            mat1: req.body.mat1,
+            mat2: req.body.mat2,
+            cie: req.body.cie,
+            his: req.body.his,
+            geo: req.body.geo,
+            bis: req.body.bis,
+            // author: req.body.author,
+            // publishYear: req.body.publishYear,
+            // test: req.body.test
         }
 
         const book = await Book.create(newBook);
@@ -63,12 +70,10 @@ router.get('/:id', async (request, response) => {
 router.put('/:id', async (request, response) => {
     try {
         if (
-            !request.body.title ||
-            !request.body.author ||
-            !request.body.publishYear
+            !request.body.nome
         ) {
             return response.status(400).send({
-                message: 'Send all requred fields: title, author, publishYear'
+                message: 'Digite o nome'
             })
         }
 

@@ -2,18 +2,42 @@ import mongoose from "mongoose";
 
 const bookSchema = mongoose.Schema(
     {
-        title: {
+        nome: {
             type: String,
             required: true,
         },
-        author: {
-            type: String,
-            required: true,
+        por1: {
+            type: Boolean,
+            required: false
         },
-        publishYear: {
-            type: Number,
-            required: true,
+        por2: {
+            type: Boolean,
+            required: false
         },
+        mat1: {
+            type: Boolean,
+            required: false
+        },
+        mat2: {
+            type: Boolean,
+            required: false
+        },
+        cie: {
+            type: Boolean,
+            required: false
+        },
+        his: {
+            type: Boolean,
+            required: false
+        },
+        geo: {
+            type: Boolean,
+            required: false
+        },
+        bis: {
+            type: Boolean,
+            required: false
+        }
     },
     {
         timestamps: true,
