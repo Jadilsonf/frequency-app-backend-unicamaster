@@ -4,7 +4,7 @@ const bookSchema = mongoose.Schema(
     {
         nome: {
             type: String,
-            required: true,
+            required: false,
         },
         por1: {
             type: Boolean,
@@ -22,22 +22,22 @@ const bookSchema = mongoose.Schema(
             type: Boolean,
             required: false
         },
-        cie: {
-            type: Boolean,
-            required: false
-        },
-        his: {
-            type: Boolean,
-            required: false
-        },
-        geo: {
-            type: Boolean,
-            required: false
-        },
-        bis: {
-            type: Boolean,
-            required: false
-        }
+        // cie: {
+        //     type: Boolean,
+        //     required: false
+        // },
+        // his: {
+        //     type: Boolean,
+        //     required: false
+        // },
+        // geo: {
+        //     type: Boolean,
+        //     required: false
+        // },
+        // bis: {
+        //     type: Boolean,
+        //     required: false
+        // }
     },
     {
         timestamps: true,
