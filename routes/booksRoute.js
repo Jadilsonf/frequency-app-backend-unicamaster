@@ -23,9 +23,6 @@ router.post('/', async (req, res) => {
             his: req.body.his,
             geo: req.body.geo,
             bis: req.body.bis,
-            // author: req.body.author,
-            // publishYear: req.body.publishYear,
-            // test: req.body.test
         }
 
         const book = await Book.create(newBook);

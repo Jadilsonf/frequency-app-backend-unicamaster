@@ -22,22 +22,26 @@ const bookSchema = mongoose.Schema(
             type: Boolean,
             required: false
         },
-        // cie: {
-        //     type: Boolean,
-        //     required: false
-        // },
-        // his: {
-        //     type: Boolean,
-        //     required: false
-        // },
-        // geo: {
-        //     type: Boolean,
-        //     required: false
-        // },
-        // bis: {
-        //     type: Boolean,
-        //     required: false
-        // }
+        cie: {
+            type: Boolean,
+            required: false
+        },
+        his: {
+            type: Boolean,
+            required: false
+        },
+        geo: {
+            type: Boolean,
+            required: false
+        },
+        bis: {
+            type: Boolean,
+            required: false
+        },
+        devolutiva: {
+            type: Boolean,
+            required: false
+        }
     },
     {
         timestamps: true,
