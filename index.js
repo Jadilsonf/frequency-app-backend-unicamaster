@@ -1,6 +1,7 @@
 import express, { request } from "express"
 import mongoose from "mongoose";
 import booksRoute from "./routes/booksRoute.js"
+import segundoBRoute from "./routes/segundoBRoute.js"
 import 'dotenv/config' 
 import cors from "cors"
 
@@ -11,6 +12,8 @@ app.use(express.json());
 app.use(cors())
 
 app.use('/books', booksRoute)
+
+app.use('/segundob', segundoBRoute)
 
 mongoose.connect(process.env.MONGO_SECRET)
         .then(() => {
