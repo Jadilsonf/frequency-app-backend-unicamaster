@@ -3,7 +3,6 @@ import { Book } from '../models/bookModel.js'
 
 const router = express.Router()
 
-//Route for save a new Book
 router.post('/', async (req, res) => {
     try {
         if (
@@ -34,7 +33,6 @@ router.post('/', async (req, res) => {
     }
 })
 
-// Route for Get All Books from database
 router.get('/', async (request, response) => {
     try {
         const books = await Book.find({})
@@ -48,7 +46,6 @@ router.get('/', async (request, response) => {
     }
 })
 
-// Route for Update a Book
 router.put('/:id', async (request, response) => {
     try {
         if (
@@ -75,18 +72,3 @@ router.put('/:id', async (request, response) => {
 })
 
 export default router
-
-// Route for Get All Books from database by id
-// router.get('/:id', async (request, response) => {
-//     try {
-
-//         const { id } = request.params
-
-//         const book = await Book.findById(id)
-
-//         return response.status(200).json(book)
-//     } catch (error) {
-//         console.log(error.message)
-//         response.status(500).send({ message: error.message})
-//     }
-// })
